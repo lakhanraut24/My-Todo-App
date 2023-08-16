@@ -8,27 +8,32 @@
 </head>
 
 <body>
- <script>
-        let todo1 = 'get groceries';
-        let todo2 = 'wash car';
-        let todo3 = 'make dinner';
+   
+    <input id="todo-title" type="text"/>
+    <button onclick="addTodo()"> Add Todo</button>
+    <script>
 
-        function addTodo(todoTitle){
+
+        let todos = ['Get grocerioes', 'Wash car', 'Make dinner', 'Do laundry'];
+
+
+        todos.forEach(function (todoTitle) {
             let element = document.createElement('div')
-        element.innerText = todoTitle;
-        document.body.appendChild(element);  
-        }
-        addTodo(todo1);
-        addTodo(todo2);
-        addTodo(todo3);
-        
-        
-        
-        
-        
-        element = document.createElement('button')
-        element.innerText = "Click Me";
-        document.body.appendChild(element);
+            element.innerText = todoTitle;
+            document.body.appendChild(element);
+        });
+
+        function addTodo() {
+            let textbox = document.getElementById('todo-title');
+            let title = textbox.value;
+            todos.push(title);
+        };
+       
+
+
+
+ 
+
     </script>
 </body>
 
