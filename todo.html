@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my todo app</title>
+</head>
+
+<body>
+ <script>
+        let todo1 = 'get groceries';
+        let todo2 = 'wash car';
+        let todo3 = 'make dinner';
+
+        function addTodo(todoTitle){
+            let element = document.createElement('div')
+        element.innerText = todoTitle;
+        document.body.appendChild(element);  
+        }
+        addTodo(todo1);
+        addTodo(todo2);
+        addTodo(todo3);
+        
+        
+        
+        
+        
+        element = document.createElement('button')
+        element.innerText = "Click Me";
+        document.body.appendChild(element);
+    </script>
+</body>
+
+</html>
